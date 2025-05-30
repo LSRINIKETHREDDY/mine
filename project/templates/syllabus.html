@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Syllabus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .syllabus-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .syllabus-left, .syllabus-right {
+            width: 45%;
+            background: #232946;
+            border-radius: 12px;
+            padding: 24px 18px;
+            box-shadow: 0 2px 12px rgba(35,41,70,0.10);
+        }
+        .syllabus-left ul, .syllabus-right ul {
+            list-style: none;
+            padding: 0;
+        }
+        .syllabus-left li, .syllabus-right li {
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .syllabus-right .nav-link {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a href="{{ url_for('home') }}" class="nav-link home-link">Home</a>
+        <h1 class="site-title">Syllabus</h1>
+    </header>
+    <div class="main-flex">
+        <section class="syllabus-section">
+            <h1>Syllabus</h1>
+            <p>Welcome to the syllabus page. Here you can find the syllabus and reference materials for each subject.</p>
+            <div class="syllabus-grid">
+                <div class="syllabus-left">
+                    <h2>Subjects</h2>
+                    <ul>
+                        <li><a href="#">Mathematics</a></li>
+                        <li><a href="#">Physics</a></li>
+                        <li><a href="#">Chemistry</a></li>
+                    </ul>
+                </div>
+                <div class="syllabus-right">
+                    <h2>Branches</h2>
+                    <ul>
+                        <li><a href="{{ url_for('cse') }}" class="nav-link">CSE</a></li>
+                        <li><a href="{{ url_for('ece') }}" class="nav-link">ECE</a></li>
+                        <li><a href="{{ url_for('eee') }}" class="nav-link">EEE</a></li>
+                        <li><a href="{{ url_for('mech') }}" class="nav-link">MECH</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

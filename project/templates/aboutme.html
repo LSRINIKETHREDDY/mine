@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="site-title">EduHub</h1>
+        <nav>
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>About Me</h1>
+        <p>
+            Hi! I'm <span class="highlight">L.sriniketh reddy</span>, founder of <span class="brand">EduHub</span>.<br><br>
+            <span class="brand">EduHub</span> is a <span class="important">free, student-powered platform</span> for <b>Diploma</b> students.<br><br>
+            Our goal: <span class="important">make studying simple, fast, and stress-free</span>.<br><br>
+            No logins, no clutter—just <span class="important">clean, verified content</span> and a friendly student community.<br><br>
+            Join us and help build a <span class="brand">better learning space</span> for everyone!
+        </p>
+    </div>
+</body>
+</html>

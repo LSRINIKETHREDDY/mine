@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECE Syllabus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <a href="{{ url_for('syllabus') }}" class="nav-link home-link">Back to Syllabus</a>
+        <h1 class="site-title">Electronics & Communication Engineering (ECE)</h1>
+    </header>
+    <div class="container">
+        <h2>Reference PDFs</h2>
+        <ul>
+            <li><a href="{{ url_for('static', filename='Analog_Circuits_Syllabus.pdf') }}" target="_blank">Analog Circuits Syllabus.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Digital_Electronics_Reference.pdf') }}" target="_blank">Digital Electronics Reference.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Signals_and_Systems_Syllabus.pdf') }}" target="_blank">Signals and Systems Syllabus.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Communication_Systems_Reference.pdf') }}" target="_blank">Communication Systems Reference.pdf</a></li>
+        </ul>
+    </div>
+</body>
+</html>

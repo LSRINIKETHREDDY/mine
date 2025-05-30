@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EEE Syllabus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <a href="{{ url_for('syllabus') }}" class="nav-link home-link">Back to Syllabus</a>
+        <h1 class="site-title">Electrical & Electronics Engineering (EEE)</h1>
+    </header>
+    <div class="container">
+        <h2>Reference PDFs</h2>
+        <ul>
+            <li><a href="{{ url_for('static', filename='Electrical_Machines_Syllabus.pdf') }}" target="_blank">Electrical Machines Syllabus.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Power_Systems_Reference.pdf') }}" target="_blank">Power Systems Reference.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Control_Systems_Syllabus.pdf') }}" target="_blank">Control Systems Syllabus.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Electrical_Measurements_Reference.pdf') }}" target="_blank">Electrical Measurements Reference.pdf</a></li>
+        </ul>
+    </div>
+</body>
+</html>

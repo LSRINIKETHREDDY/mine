@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduHub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<header>
+
+    <style>
+        h1 {
+            color: #2104e2; /* Same color as notification and news */
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <h1>EduHub</h1>
+
+</header>
+<body>
+    <div class="main-flex">
+        <section class="notification-section">
+            <h2>Notifications & News</h2>
+            <!-- Notification/News Item 1 -->
+            <div class="notification-item">
+                <div class="notification-title">
+                    Semester Exam Schedule Released
+                </div>
+                <a href="{{ url_for('static', filename='notifications/a.pdf') }}" target="_blank" class="notification-link">
+                    View Official PDF
+                </a>
+                <div class="notification-summary">
+                    <strong>Summary:</strong> The university has published the semester exam schedule for all branches. Exams will be conducted offline starting June 10th. Please check the PDF for your detailed timetable.
+                </div>
+            </div>
+            <!-- Notification/News Item 2 -->
+            <div class="notification-item">
+                <div class="notification-title">
+                    New Syllabus Update for 2025
+                </div>
+                <a href="{{ url_for('static', filename='notifications/b.pdf') }}" target="_blank" class="notification-link">
+                    View Syllabus PDF
+                </a>
+                <div class="notification-summary">
+                    <strong>Summary:</strong> The 2025 diploma syllabus has been updated with new subjects and project guidelines. All students are advised to download and review the changes.
+                </div>
+            </div>
+        </section>
+        <nav class="side-nav">
+            <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+            <a href="{{ url_for('about') }}" class="nav-link">About Me</a>
+            <a href="{{ url_for('syllabus') }}" class="nav-link">syllabus</a>
+        </nav>
+    </div>
+</body>
+</html>

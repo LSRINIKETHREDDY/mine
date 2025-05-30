@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="site-title">EduHub</h1>
+        <nav>
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form action="{{ url_for('contact') }}" method="POST">
+            <input type="text" name="name" placeholder="Your Name (letters only)" pattern="[A-Za-z\s]+" title="Name should contain only letters" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>

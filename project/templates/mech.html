@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MECH Syllabus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <a href="{{ url_for('syllabus') }}" class="nav-link home-link">Back to Syllabus</a>
+        <h1 class="site-title">Mechanical Engineering (MECH)</h1>
+    </header>
+    <div class="container">
+        <h2>Reference PDFs</h2>
+        <ul>
+            <li><a href="{{ url_for('static', filename='Thermodynamics_Syllabus.pdf') }}" target="_blank">Thermodynamics Syllabus.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Fluid_Mechanics_Reference.pdf') }}" target="_blank">Fluid Mechanics Reference.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Machine_Design_Syllabus.pdf') }}" target="_blank">Machine Design Syllabus.pdf</a></li>
+            <li><a href="{{ url_for('static', filename='Manufacturing_Processes_Reference.pdf') }}" target="_blank">Manufacturing Processes Reference.pdf</a></li>
+        </ul>
+    </div>
+</body>
+</html>
