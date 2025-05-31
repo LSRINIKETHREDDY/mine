@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "mine"
+version = "0.1.0"
+description = "My project"
+authors = ["LSRINIKETHREDDY <your-email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
