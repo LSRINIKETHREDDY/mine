@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: eduhub
+    env: python
+    buildCommand: "poetry install"
+    startCommand: "poetry run python project/app.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    plan: free

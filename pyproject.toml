@@ -1,16 +1,14 @@
 [tool.poetry]
-name = "mine"
+name = "eduhub"
 version = "0.1.0"
-description = "My project"
-authors = ["LSRINIKETHREDDY <your-email@example.com>"]
+description = "EduHub Flask Platform"
+authors = ["L.sriniketh reddy <ghanisriniketh@gmail.com>"]
+packages = [{ include = "project" }]
 
 [tool.poetry.dependencies]
-python = "^3.11"
-flask = "^2.3.3"
-gunicorn = "^21.2.0"
-
-
-[tool.poetry.dev-dependencies]
+python = "^3.10"
+Flask = "^2.0.3"
+fpdf = "^1.7.2"
 
 [build-system]
 requires = ["poetry-core"]
