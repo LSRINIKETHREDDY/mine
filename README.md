@@ -5,65 +5,73 @@ EduHub is a real-time, student-first educational platform where learners can fre
 ## Project Structure
 
 ```
-project
-├── app.py                   # Main Flask application
-├── templates
-│   ├── mainpage.html        # Home page with notifications/news
-│   ├── contact.html         # Contact form
-│   ├── aboutme.html         # About page
-│   └── thanks.html          # Submission feedback page
-├── static
-│   ├── style.css            # CSS styles for the platform
-│   └── notifications
-│       ├── notification1.pdf  # Example notification PDF
-│       └── notification2.pdf  # Example notification PDF
-├── requirements.txt         # Project dependencies
-└── README.md                # Project documentation
+mine/
+├── app.py                  # Main Flask application
+├── templates/              # HTML templates for all pages
+│   ├── mainpage.html
+│   ├── contact.html
+│   ├── aboutme.html
+│   ├── thanks.html
+│   ├── syllabus.html
+│   ├── cse.html
+│   ├── ece.html
+│   ├── eee.html
+│   └── mech.html
+├── static/
+│   └── style.css           # CSS styles for the platform
+├── pyproject.toml          # Poetry dependency file
+├── poetry.lock             # Poetry lock file
+├── requirements.txt        # pip requirements (for local dev)
+├── render.yaml             # Render.com deployment config
+└── README.md               # Project documentation
 ```
 
-## Installation
+## Installation (Local)
 
 1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd project
-   ```
-
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
+   ```sh
+   git clone https://github.com/LSRINIKETHREDDY/mine.git
+   cd mine
    ```
 
-## Usage
-
-1. Run the application:
-   ```
-   python app.py
+2. Install dependencies using Poetry:
+   ```sh
+   poetry install
    ```
 
-2. Open your web browser and go to `http://127.0.0.1:5000/` to access EduHub.
+3. Run the application locally:
+   ```sh
+   poetry run python app.py
+   ```
 
-3. Browse notifications/news, download PDFs, or use the contact form to reach out.
+4. Open your web browser and go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to access EduHub.
+
+## Deployment (Render.com)
+
+1. Ensure `render.yaml`, `pyproject.toml`, and `poetry.lock` are at the repo root.
+2. Render will use the following start command:
+   ```
+   poetry run gunicorn app:app
+   ```
+3. On successful deploy, your app will be available at your Render.com service URL.
 
 ## Features
 
-- Home page with summarized notifications and news (PDFs and text).
+- Home page with summarized notifications and news.
 - Contact form that sends messages to the admin's email.
 - About page describing EduHub's mission.
 - Responsive, modern design with a bluish-purple theme.
 
 ## Requirements
 
-The main dependencies are listed in `requirements.txt`:
+Main dependencies (managed by Poetry):
 
 - Flask: A lightweight WSGI web application framework.
-- Flask-Mail: An extension to Flask that provides simple mail sending capabilities.
-- Flask-WTF: An extension that integrates WTForms with Flask.
-- PyPDF2: A library to read PDF files.
-- python-dotenv: A library to manage environment variables.
+- Gunicorn: Production WSGI server for deployment.
+- fpdf: PDF generation library.
 
 ## Notes
 
-- Place your notification PDFs in `static/notifications/`.
+- Place any static files (like images or PDFs) in the `static/` folder.
 - Configure your email settings in `app.py` for the contact form to work.
 - For AI/chatbot integration or advanced features, see project issues or contact the maintainer.
