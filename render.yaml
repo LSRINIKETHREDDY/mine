@@ -3,7 +3,7 @@ services:
     name: eduhub
     env: python
     buildCommand: "poetry install"
-    startCommand: "poetry run python project/app.py"
+    startCommand: "poetry run gunicorn project.app:app"
     envVars:
       - key: FLASK_ENV
         value: production

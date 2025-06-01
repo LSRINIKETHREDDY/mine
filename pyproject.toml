@@ -9,6 +9,7 @@ packages = [{ include = "project" }]
 python = "^3.10"
 Flask = "^2.0.3"
 fpdf = "^1.7.2"
+gunicorn = "^21.2.0"
 
 [build-system]
 requires = ["poetry-core"]
